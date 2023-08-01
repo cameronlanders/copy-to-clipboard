@@ -6,7 +6,7 @@ Just clone this repo to a test folder on your local machine. The sample HTML fil
 
 This uses the new [Javascript Clipboard API](https://developer.mozilla.org/en-US/docs/Web/API/Clipboard_API), which should work in all modern browsers.
 
-* Free and open source. No license needed.
+* Free and open source. No license is needed.
 
 Cheers,
 
