@@ -1,0 +1,35 @@
+
+<html>
+    <head>
+        <title>Copy To Clipboard</title>
+        <script>
+            navigator.clipboard.writeText("<empty clipboard>").then(
+                () => {
+                /* clipboard successfully set */
+                },
+                () => {
+                /* clipboard write failed */
+                },
+            );
+
+            async function copyToClipboard() {
+                let copyText = document.getElementById("txtCopy");
+                try {
+                    await navigator.clipboard.writeText(copyText.value);
+                    document.getElementById("status").innerHTML='Text: &quot;' + copyText.value + '&quot; copied to clipboard.';
+                } catch (err) {
+                    document.getElementById("status").innerHTML='Copy failed.';
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <div style="text-align:center;width:100%;padding:12px;margin-top:50px">
+            <input id="txtCopy" type="text" />
+            <button id="btnCopy" onclick="copyToClipboard()">Click To Copy</button>
+            <div id="status" style="margin-top: 20px;"></div>
+        </div>
+    </body>
+</html>
+
+  
